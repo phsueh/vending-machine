@@ -1,5 +1,15 @@
 # CLI Vending Machine
 
+### Features
+
+This is a simple vending machine CLI application built with Ruby.
+
+- Once the product is selected and the appropriate amount of coins inserted - it should return the product.
+- It should return change (coins) if inserted too much.
+- Change should be returned with the minimum amount of coins possible.
+- It should notify the customer when the selected product is out of stock.
+- It should return inserted coins in case it does not have enough change.
+
 ### Initialization
 The entry point is vending_machine.rb
 
@@ -21,15 +31,6 @@ Value | Quantity
 1.00 | 5
 0.50 | 5
 0.25 | 5
-
---- 
-### Features
-
-- Once the product is selected and the appropriate amount of coins inserted - it should return the product.
-- It should return change (coins) if inserted too much.
-- Change should be returned with the minimum amount of coins possible.
-- It should notify the customer when the selected product is out of stock.
-- It should return inserted coins in case it does not have enough change.
 
 ### Setup
 0. Fork and clone the repo, `cd` to the folder
