@@ -1,7 +1,4 @@
 class VendingMachine
-  # it is not an AR class so you need to add attr
-  attr_reader :product, :name, :show_price, :coin
-  attr_writer :coin
 
   def run
     welcome
@@ -42,12 +39,12 @@ class VendingMachine
       coins = STDIN.gets.chomp.to_f
       coins_arr.push coins
       sum = coins_arr.sum
+      remaining = chosen_product.price - sum
       puts "#{coins_arr}"
-      puts "Amount inserted $#{"%.2f" % sum}"
+      puts "Amount inserted $#{"%.2f" % sum}, $#{remaining} remaining"
       break if sum >= chosen_product.price
     end
-    
-    # I think this can be its own method 
+  
     sum = coins_arr.sum
     if sum == chosen_product.price
       puts "enjoy your #{chosen_product.name}!"
@@ -60,7 +57,13 @@ class VendingMachine
 
   def get_change(change)
     coins = change.divmod(1)
-    puts "your change is $#{"%.2f" % change}, here are you coins $#{"%.2f" % coins}"
+    coin_change = coins.map {|j| j.round(2)} 
+    if coin_change
+      puts "your change is $#{"%.2f" % change}, here are your coins $#{coin_change}"
+    else 
+      puts "sorry we have no change here's your money back #{change}" 
+      exit
+    end 
     all_coins = Coin.all.map { |j| j.show_amount }
     # all_coins_arr = all_coins.flatten
     # puts "#{all_coins_arr}"
