@@ -37,12 +37,13 @@ Value | Quantity
 1. Run `bundle`
 2. Migrate: run `rake db:migrate`
 3. Seed data: run `rake db:seed`
-4. Run addp: run `rake start` 
+4. Run add: run `rake start` 
 ---
 
 ### Notes
 - App assumes user inputs are case sensitive
 - If user inputs non-matching cases for product select app will need to be re-ran with `rake start`
+- If user selects product with 0 quantities, app will exit and close
 
 ## Future Improvements
 - Create new classes for better OOP approach
