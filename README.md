@@ -48,3 +48,6 @@ Value | Quantity
 ## Future Improvements
 - Create new classes for better OOP approach
 - Write test to ensure products are intialized with quantities
+- Rework algorithm to return correct coins and be able to reduce coin amounts in database
+- Redo user interface so user does not have to type inputs
+- Rewrite coins test
