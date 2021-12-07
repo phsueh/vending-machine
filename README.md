@@ -31,9 +31,6 @@ Value | Quantity
 - It should notify the customer when the selected product is out of stock.
 - It should return inserted coins in case it does not have enough change.
 
-### Notes
-- App assumes user inputs are case sensitive
-
 ### Setup
 0. Fork and clone the repo, `cd` to the folder
 1. Run `bundle`
@@ -41,6 +38,10 @@ Value | Quantity
 3. Seed data: run `rake db:seed`
 4. Run addp: run `rake start` 
 ---
+
+### Notes
+- App assumes user inputs are case sensitive
+- If user inputs non-matching cases for product select app will need to be re-ran with `rake start`
 
 ## Future Improvements
 - Create new classes for better OOP approach
